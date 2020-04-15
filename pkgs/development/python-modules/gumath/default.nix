@@ -6,6 +6,7 @@
 , libxnd
 , libgumath
 , isPy27
+, isPy38
 }:
 
 buildPythonPackage {
@@ -25,4 +26,8 @@ buildPythonPackage {
       --replace 'add_runtime_library_dirs = ["$ORIGIN"]' \
                 'add_runtime_library_dirs = ["${libndtypes}/lib", "${libxnd}/lib", "${libgumath}/lib"]'
   '';
+
+  meta = {
+    broken = isPy38;
+  };
 }

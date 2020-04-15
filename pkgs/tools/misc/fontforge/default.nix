@@ -74,5 +74,6 @@ stdenv.mkDerivation rec {
     homepage = http://fontforge.github.io;
     platforms = stdenv.lib.platforms.all;
     license = stdenv.lib.licenses.bsd3;
+    broken = withPython;
   };
 }

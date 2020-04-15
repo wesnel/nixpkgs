@@ -46,5 +46,6 @@ stdenv.mkDerivation rec {
     license = with lib.licenses; [ bsd3 lgpl3 gpl3 ];
     maintainers = with lib.maintainers; [ lopsided98 ];
     platforms = lib.platforms.all;
+    broken = true;
   };
 }
