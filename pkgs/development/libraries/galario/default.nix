@@ -7,7 +7,6 @@
 , enablePython ? false
 , pythonPackages
 , llvmPackages
-, isPy38
 }:
 let
   # CMake recipes are needed to build galario
@@ -75,6 +74,6 @@ stdenv.mkDerivation rec {
     license = licenses.lgpl3;
     maintainers = [ maintainers.smaret ];
     platforms = platforms.all;
-    broken = isPy38;
+    broken = pythonPackages.isPy38;
   };
 }
